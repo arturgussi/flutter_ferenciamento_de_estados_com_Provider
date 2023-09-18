@@ -72,3 +72,10 @@ Compreender a importância do inherited widget e também que a sua complexidade 
 
 Implementar o provider em nosso aplicativo por meio do ChangeNotifierProvider e as models do projeto no vídeo utilizando o provider.
 
+Compreender o que é o widget consumer e sua relevância ao consultar o estado diretamente de dentro da árvore de widgets com o vídeo consumer;
+
+Adicionar clientes na lista de clientes que está sendo gerenciada pelo provider através do consumer no vídeo adicionar clientes;
+
+Ler os dados de tipos de clientes contidos na model no vídeo lendo tipos de clientes;
+
+Aplicar e entender como funciona o Provider.of para acessar o estado de um provider sem que este esteja diretamente dentro da árvore de widgets no vídeo tipos de clientes.
