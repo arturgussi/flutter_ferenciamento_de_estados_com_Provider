@@ -11,4 +11,9 @@ class Clients extends ChangeNotifier {
     clients.add(client);
     notifyListeners();
   }
+
+  void remove(int index) {
+    clients.removeAt(index);
+    notifyListeners();
+  }
 }

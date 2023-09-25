@@ -79,3 +79,46 @@ Adicionar clientes na lista de clientes que está sendo gerenciada pelo provider
 Ler os dados de tipos de clientes contidos na model no vídeo lendo tipos de clientes;
 
 Aplicar e entender como funciona o Provider.of para acessar o estado de um provider sem que este esteja diretamente dentro da árvore de widgets no vídeo tipos de clientes.
+
+
+### Extra
+
+GetX: desempenho e economia
+O GetX tem três princípios básicos que são a prioridade para todos os recursos da biblioteca: PRODUTIVIDADE, DESEMPENHO E ORGANIZAÇÃO.
+
+Desempenho: GetX está focado em desempenho e consumo mínimo de recursos. GetX não usa Streams ou ChangeNotifier;
+
+Produtividade: GetX usa uma sintaxe fácil e agradável. Não importa o que você queira fazer, sempre há uma maneira mais fácil com o GetX. Isso economiza horas de desenvolvimento e fornece o máximo desempenho que seu aplicativo pode oferecer. Geralmente, o desenvolvedor deve se preocupar em remover os controladores da memória. Com GetX, isso não é necessário, porque os recursos são removidos da memória quando não são usados por padrão. Se você quiser mantê-los na memória, você deve declarar explicitamente permanent: true em sua dependência. Dessa forma, além de economizar tempo, você corre menos risco de ter dependências desnecessárias de memória. O carregamento de dependência também é lento por padrão;
+
+Organização: GetX permite o desacoplamento total da View, lógica de apresentação, lógica de negócios, injeção de dependência e navegação. Você não precisa de contexto para navegar entre as rotas, portanto, não depende da árvore de widgets (visualização) para isso. Você não precisa de contexto para acessar seus controladores/blocos por meio de um Widget herdado, portanto, dissocia completamente sua lógica de apresentação e lógica de negócios de sua camada de visualização. Você não precisa injetar suas classes Controllers/Models/Blocs em sua árvore de widgets por meio de MultiProviders. Para isso, o GetX utiliza seu próprio recurso de injeção de dependência, desacoplando completamente a DI de sua visão.
+
+MobX: simplicidade
+O MobX é uma biblioteca de gerenciamento de estado que simplifica a conexão dos dados reativos do seu aplicativo com a interface do usuário. Esta fiação é completamente automática e parece muito natural. Como desenvolvedor de aplicativos, você se concentra exclusivamente em quais dados reativos precisam ser consumidos na interface do usuário (e em outros lugares) sem se preocupar em manter os dois em sincronia.
+
+Não é realmente mágico, mas tem alguns conhecimentos sobre o que está sendo consumido (observáveis) e onde (reações), e rastreia automaticamente para você. Quando os observáveis mudam, todas as reações são executadas novamente.
+
+O interessante é que essas reações podem ser qualquer coisa, desde um simples log de console a uma chamada de rede para renderizar novamente a interface do usuário. Em geral, o MobX lembra um pouco o funcionamento do Redux, mas com uma proposta mais direcionada.
+
+BloC:
+    Padrão para gerenciar dados através de streams
+        Aciona um listener que retorna algo através de uma função. Este listener fica ligado direto
+    
+    UI -> (functions) -> cubit -> (request)  -> data
+    UI <-   (states)  <- cubit <- (response) <- data
+
+    cubit => Objeto com os estados, valores, variáveis e etc
+
+
+Redux:
+    Gerenciamento reativo "herdado" do react
+    Funcionamento (ciclico) =>    Actions -> State -> View -> Actions
+
+--- 
+
+Como melhorar a implementação do nosso código, atribuindo à model a responsabilidade de editar dados no vídeo "Melhorando o código";
+
+Entender como funciona o gerenciamento estados por meio do padrão BloC no vídeo "Conhecendo o BloC";
+
+Compreender como funciona o gerenciamento de estados por meio do Redux no vídeo "Descobrindo o Redux";
+
+Saber melhor que existem outros gerenciadores de estados além dos vistos nas aulas e que não existe um melhor ou pior; há sempre o que se adequa melhor ao que você necessita em uma ocasião específica, na atividade para saber mais.
